@@ -36,6 +36,8 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
               textDirection: TextDirection.rtl,
               style: const TextStyle(
                 color: Colors.black,
+                fontSize: 24,
+                fontWeight: FontWeight.w500,
               ),
             ),
             separatorBuilder: (context , index) => Container(
