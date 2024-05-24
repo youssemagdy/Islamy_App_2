@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> navWidget = [
     const RadioWidget(),
     const SebhaWidget(),
-    const AhadethWidget(),
+    AhadethWidget(),
     QuranWidget(),
   ];
 
