@@ -20,10 +20,7 @@ class HadethTitleItem extends StatelessWidget {
       child: Text(
         hadeth.title,
         textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w500,
-        ),
+        style: Theme.of(context).textTheme.labelMedium,
       ),
     );
   }

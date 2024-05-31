@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:islami_app/style/app_theme.dart';
 import 'package:islami_app/ui/ahadeth_details/ahadeth_details_screen.dart';
 import 'package:islami_app/ui/home/home_screen.dart';
 import 'package:islami_app/ui/quran_details/quran_details_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,36 +17,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: Color(0xFFB7935F),
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.white,
-          selectedIconTheme: IconThemeData(
-            size: 32,
-          ),
-          unselectedIconTheme: IconThemeData(
-            size: 20,
-          ),
-        ),
-        scaffoldBackgroundColor: Colors.transparent,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.transparent,
-          centerTitle: true,
-          titleTextStyle: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            color: Colors.black,
-          )
-        ),
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFB7935F),
-          primary: const Color(0xFFB7935F),
-          secondary: const Color(0xFFB7935F).withOpacity(0.57),
-          onPrimary: Colors.white,
-          onSecondary: Colors.black,
-        ),
-      ),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: AppTheme.isDark ? ThemeMode.dark : ThemeMode.light,
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: const [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale("en"),
+        Locale("ar"),
+      ],
+      locale: const Locale("en"),
       title: 'Islamy',
       initialRoute: HomeScreen.routName,
       routes: {

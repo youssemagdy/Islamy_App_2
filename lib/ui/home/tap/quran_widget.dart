@@ -31,6 +31,10 @@ class QuranWidget extends StatelessWidget {
             'assets/image/quran_image.png',
           ),
         ),
+        Text(
+          'Chapter Title',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
         Expanded(
           flex: 3,
           child: ListView.separated(
@@ -46,7 +50,7 @@ class QuranWidget extends StatelessWidget {
               return Container(
                 width: double.infinity,
                 height: 2,
-                color: Theme.of(context).primaryColor,
+                color: Theme.of(context).dividerColor,
                 margin: const EdgeInsets.all(5),
               );
             },

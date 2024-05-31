@@ -27,16 +27,13 @@ class _AhadethWidgetState extends State<AhadethWidget> {
           width: double.infinity,
           decoration: BoxDecoration(
             border: Border.symmetric(horizontal: BorderSide(
-              color: Theme.of(context).primaryColor,
+              color: Theme.of(context).dividerColor,
               width: 2,
             )),
           ),
-          child: const Text(
+          child: Text(
             'Ahadeth',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w600,
-            ),
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         Expanded(
