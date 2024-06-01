@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/ui/home/tap/language_sheet.dart';
 import 'package:islami_app/ui/home/tap/theme_sheet.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class SettingWidget extends StatefulWidget {
   const SettingWidget({Key? key}) : super(key: key);
@@ -17,7 +19,10 @@ class _SettingWidgetState extends State<SettingWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('Language', style: TextStyle(fontSize: 20),),
+          Text(
+            AppLocalizations.of(context)!.language,
+            style: const TextStyle(fontSize: 20),
+          ),
           const SizedBox(height: 10,),
           InkWell(
             onTap: (){
@@ -43,7 +48,10 @@ class _SettingWidgetState extends State<SettingWidget> {
             ),
           ),
           const SizedBox(height: 20,),
-          const Text('Theme', style: TextStyle(fontSize: 20),),
+          Text(
+            AppLocalizations.of(context)!.theme,
+            style: const TextStyle(fontSize: 20),
+          ),
           const SizedBox(height: 10,),
           InkWell(
             onTap: (){
@@ -61,7 +69,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                   ),
                 ),
                 child: Text(
-                  'Light',
+                  AppLocalizations.of(context)!.light,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: Theme.of(context).primaryColor,
                   ),

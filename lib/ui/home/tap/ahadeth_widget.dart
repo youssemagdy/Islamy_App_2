@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/ui/home/hadeth_model.dart';
 import 'package:islami_app/ui/home/hadeth_title.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class AhadethWidget extends StatefulWidget {
 
@@ -32,7 +34,7 @@ class _AhadethWidgetState extends State<AhadethWidget> {
             )),
           ),
           child: Text(
-            'Ahadeth',
+            AppLocalizations.of(context)!.ahadeth,
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),

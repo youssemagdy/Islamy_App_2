@@ -1,3 +1,13 @@
 {
-  "islamy" : "Islamy"
+  "islamy" : "Islamy",
+  "quran" : "Quran",
+  "ahadeth" : "Ahadeth",
+  "setting" : "Setting",
+  "sebha" : "Sebha",
+  "radio" : "Radio",
+  "language" : "Language",
+  "theme" : "Theme",
+  "dark" : "Dark",
+  "light" : "Light",
+  "chapter_title" : "Chapter Title"
 }

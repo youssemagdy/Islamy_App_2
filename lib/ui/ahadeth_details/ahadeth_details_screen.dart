@@ -29,7 +29,6 @@ class _AhadethDetailsScreenState extends State<AhadethDetailsScreen> {
           children: [
             Expanded(
               child: Card(
-
                 child: SingleChildScrollView(
                   child: Text(
                     hadethModel.content,

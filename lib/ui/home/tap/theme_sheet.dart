@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class ThemeSheet extends StatefulWidget {
   const ThemeSheet({Key? key}) : super(key: key);
@@ -15,9 +17,9 @@ class _ThemeSheetState extends State<ThemeSheet> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          getSelectedItem('Light'),
+          getSelectedItem(AppLocalizations.of(context)!.light),
           const SizedBox(height: 15,),
-          getUnselectedItem('Dark'),
+          getUnselectedItem(AppLocalizations.of(context)!.dark),
         ],
       ),
     );

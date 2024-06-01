@@ -1,3 +1,13 @@
 {
-  "islamy" : "أسلامي"
+  "islamy" : "أسلامي",
+  "quran" : "قرأن",
+  "ahadeth" : "أحاديث",
+  "setting" : "ألاعدادات",
+  "sebha" : "سبحه",
+  "radio" : "راديو",
+  "language" : "أللغه",
+  "theme" : "ألوضع",
+  "dark" : "داكن",
+  "light" : "فاتح",
+  "chapter_title" : "أسم الصورة"
 }

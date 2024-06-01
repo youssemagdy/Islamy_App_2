@@ -51,35 +51,35 @@ class _HomeScreenState extends State<HomeScreen> {
               icon: const ImageIcon(
                 AssetImage('assets/icon/radio_icon.png'),
               ),
-              label: 'Radio',
+              label: AppLocalizations.of(context)!.radio,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const ImageIcon(
                 AssetImage('assets/icon/sebha_icon.png'),
               ),
-              label: 'Sebha',
+              label: AppLocalizations.of(context)!.sebha,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const ImageIcon(
                 AssetImage('assets/icon/ahadeth_icon.png'),
               ),
-              label: 'Ahadeth',
+              label: AppLocalizations.of(context)!.ahadeth,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const ImageIcon(
                 AssetImage('assets/icon/quran_icon.png'),
               ),
-              label: 'Quran',
+              label: AppLocalizations.of(context)!.quran,
             ),
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const Icon(
                 Icons.settings,
               ),
-              label: 'Settings',
+              label: AppLocalizations.of(context)!.setting,
             ),
           ],
         ),
