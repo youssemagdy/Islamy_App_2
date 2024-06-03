@@ -1,8 +1,5 @@
-import 'dart:js_interop';
-
 import 'package:flutter/material.dart';
 import 'package:islami_app/provider/setting_provider.dart';
-import 'package:islami_app/style/app_theme.dart';
 import 'package:islami_app/ui/home/tap/ahadeth_widget.dart';
 import 'package:islami_app/ui/home/tap/quran_widget.dart';
 import 'package:islami_app/ui/home/tap/radio_widget.dart';

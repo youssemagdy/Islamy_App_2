@@ -68,6 +68,16 @@ class AppTheme{
         fontSize: 20,
         color: lightPrimary,
       ),
+      headlineLarge: const TextStyle(
+        color: Colors.black,
+        fontSize: 25,
+        fontWeight: FontWeight.w600
+      ),
+      titleSmall: const TextStyle(
+          color: Colors.white,
+          fontSize: 25,
+          fontWeight: FontWeight.w600
+      ),
     ),
 
     cardTheme: const CardTheme(
@@ -142,6 +152,16 @@ class AppTheme{
         // unSelected
         fontSize: 20,
         color: darkSecondary,
+      ),
+      headlineLarge: const TextStyle(
+        color: Colors.white,
+        fontSize: 25,
+        fontWeight: FontWeight.w600
+      ),
+      titleSmall: const TextStyle(
+        color: Colors.black,
+        fontSize: 25,
+        fontWeight: FontWeight.w600
       ),
     ),
 

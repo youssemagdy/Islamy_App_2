@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/provider/setting_provider.dart';
-import 'package:islami_app/style/app_theme.dart';
 import 'package:islami_app/ui/home/hadeth_model.dart';
 import 'package:provider/provider.dart';
 

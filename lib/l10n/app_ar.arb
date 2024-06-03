@@ -9,5 +9,6 @@
   "theme" : "ألوضع",
   "dark" : "داكن",
   "light" : "فاتح",
-  "chapter_title" : "أسم الصورة"
+  "chapter_title" : "أسم الصورة",
+  "counter" : "عدد التسبيحات"
 }

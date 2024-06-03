@@ -9,5 +9,6 @@
   "theme" : "Theme",
   "dark" : "Dark",
   "light" : "Light",
-  "chapter_title" : "Chapter Title"
+  "chapter_title" : "Chapter Title",
+  "counter" : "Counter"
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/provider/setting_provider.dart';
-import 'package:islami_app/style/app_theme.dart';
 import 'package:provider/provider.dart';
 
 class QuranDetailsScreen extends StatefulWidget {
