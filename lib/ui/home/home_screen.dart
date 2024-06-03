@@ -1,4 +1,7 @@
+import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
+import 'package:islami_app/provider/setting_provider.dart';
 import 'package:islami_app/style/app_theme.dart';
 import 'package:islami_app/ui/home/tap/ahadeth_widget.dart';
 import 'package:islami_app/ui/home/tap/quran_widget.dart';
@@ -6,6 +9,7 @@ import 'package:islami_app/ui/home/tap/radio_widget.dart';
 import 'package:islami_app/ui/home/tap/sebha_widget.dart';
 import 'package:islami_app/ui/home/tap/settings_widget.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routName = 'HomeScreen';
@@ -26,10 +30,15 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    SettingProvider provider = Provider.of<SettingProvider>(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(AppTheme.isDark ? 'assets/image/darkback.png' : 'assets/image/bg3.png'),
+          image: AssetImage(
+            provider.theme == ThemeMode.dark ?
+            'assets/image/darkback.png' : 
+            'assets/image/bg3.png',
+          ),
           fit: BoxFit.fill,
         ),
       ),

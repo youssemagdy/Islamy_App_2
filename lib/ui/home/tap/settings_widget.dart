@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/provider/setting_provider.dart';
 import 'package:islami_app/ui/home/tap/language_sheet.dart';
 import 'package:islami_app/ui/home/tap/theme_sheet.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 
 class SettingWidget extends StatefulWidget {
@@ -14,6 +16,7 @@ class SettingWidget extends StatefulWidget {
 class _SettingWidgetState extends State<SettingWidget> {
   @override
   Widget build(BuildContext context) {
+    SettingProvider provider = Provider.of<SettingProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(18.0),
       child: Column(
@@ -40,7 +43,7 @@ class _SettingWidgetState extends State<SettingWidget> {
                 ),
               ),
               child: Text(
-                'English',
+                provider.language == "ar" ? "العربية": 'English',
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color: Theme.of(context).primaryColor,
                 ),
@@ -69,6 +72,8 @@ class _SettingWidgetState extends State<SettingWidget> {
                   ),
                 ),
                 child: Text(
+                  provider.theme == ThemeMode.dark ?
+                  AppLocalizations.of(context)!.dark :
                   AppLocalizations.of(context)!.light,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                     color: Theme.of(context).primaryColor,

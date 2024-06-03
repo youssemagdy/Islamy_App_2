@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami_app/provider/setting_provider.dart';
 import 'package:islami_app/style/app_theme.dart';
+import 'package:provider/provider.dart';
 
 class QuranDetailsScreen extends StatefulWidget {
   static const String routName = 'QuranDetailsScreen';
@@ -12,6 +14,7 @@ class QuranDetailsScreen extends StatefulWidget {
 class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
   @override
   Widget build(BuildContext context) {
+    SettingProvider provider = Provider.of<SettingProvider>(context);
     QuranDetailsArgs args = ModalRoute.of(context)?.settings.arguments as QuranDetailsArgs;
     if (lines.isEmpty){
       readQuranFile(args.index);
@@ -19,7 +22,11 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(AppTheme.isDark ? 'assets/image/darkback.png' : 'assets/image/bg3.png'),
+          image: AssetImage(
+            provider.theme == ThemeMode.dark ?
+            'assets/image/darkback.png' :
+            'assets/image/bg3.png',
+          ),
           fit: BoxFit.fill,
         )
       ),
