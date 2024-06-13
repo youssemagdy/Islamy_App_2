@@ -15,6 +15,8 @@ class _SebhaWidgetState extends State<SebhaWidget> {
   int count = 0;
   int index = 0;
   double angel = 0;
+
+
   List<String> tasbeh = [
     'سبحان الله' ,
     'الحمد لله' ,

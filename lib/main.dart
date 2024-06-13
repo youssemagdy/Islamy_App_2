@@ -8,10 +8,13 @@ import 'package:islami_app/ui/quran_details/quran_details_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  var provider = SettingProvider();
+  await provider.loadThemeData();
   runApp(
     ChangeNotifierProvider(
-      create: (context) => SettingProvider(),
+      create: (context) => provider,
       child: const MyApp(),
     ),
   );
